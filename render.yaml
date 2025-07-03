@@ -6,9 +6,11 @@ services:
     buildCommand: |
       cd invoice-frontend && npm install && npm run build
       cd ../backend && npm install
-    startCommand: cd backend && node server.js
+    startCommand: node backend/server.js
     envVars:
       - key: MONGO_URI
-        value: mongodb+srv://parthkumar157:P@rth157@cluster0.vkbn5fk.mongodb.net/invoice-system?retryWrites=true&w=majority&appName=Cluster0
+        value: <your-uri>
       - key: JWT_SECRET
         value: yourSecretKey
+      - key: NODE_ENV
+        value: production
