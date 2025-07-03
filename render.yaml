@@ -5,8 +5,8 @@ services:
     plan: free
     buildCommand: |
       cd invoice-frontend && npm install && npm run build
-      cd ../backend && npm install
-    startCommand: cd backend && node server.js
+      cd ../backend && rm -rf node_modules package-lock.json && npm install
+    startCommand: cd backend && npm start
     envVars:
       - key: MONGO_URI
         value: mongodb+srv://parthkumar157:P%40rth157@cluster0.vkbn5fk.mongodb.net/invoice-system?retryWrites=true&w=majority&appName=Cluster0
