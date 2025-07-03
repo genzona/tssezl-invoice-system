@@ -39,9 +39,8 @@ app.use("/api/invoices", invoiceRoutes);
 
 // 👉 Serve frontend build in production (on Render)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend", "build")));
-
+  app.use(express.static(path.join(__dirname, "../invoice-frontend/build")));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../frontend", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../invoice-frontend/build/index.html"));
   });
 }
