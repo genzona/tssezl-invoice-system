@@ -9,6 +9,6 @@ services:
     startCommand: cd backend && node server.js
     envVars:
       - key: MONGO_URI
-        value: mongodb+srv://parthkumar157:P@rth157@cluster0.vkbn5fk.mongodb.net/invoice-system?retryWrites=true&w=majority&appName=Cluster0
+        value: mongodb+srv://parthkumar157:P%40rth157@cluster0.vkbn5fk.mongodb.net/invoice-system?retryWrites=true&w=majority&appName=Cluster0
       - key: JWT_SECRET
         value: yourSecretKey
