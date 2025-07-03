@@ -1,15 +1,15 @@
 services:
   - type: web
-    name: tssezl-app
+    name: tssezl-api
     env: node
-    plan: free
+    rootDir: backend
     buildCommand: |
-      cd invoice-frontend && npm install && npm run build
-      cd ../backend && npm install
-    startCommand: node backend/server.js
+      cd ../invoice-frontend && npm install && npm run build
+      npm install
+    startCommand: node server.js
     envVars:
       - key: MONGO_URI
-        value: <your-uri>
+        value: mongodb+srv://parthkumar157:P%40rth157@cluster0.vkbn5fk.mongodb.net/invoice-system?retryWrites=true&w=majority&appName=Cluster0
       - key: JWT_SECRET
         value: yourSecretKey
       - key: NODE_ENV
