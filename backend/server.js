@@ -11,11 +11,35 @@ dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://invoice-frontend-livid-six.vercel.app"
+];
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed from this origin"));
+    }
+  },
+  credentials: true,
+}));
 app.use(express.json());
+app.options("*", cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed from this origin"));
+    }
+  },
+  credentials: true,
+}));
+
 
 // Serve uploaded PDFs
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
