@@ -1,0 +1,58 @@
+[
+  {
+    "uid": "HEAD_IT01",
+    "password": "yourpassword",
+    "role": "HEAD_IT",
+    "department": "IT"
+  },
+  {
+    "uid": "HEAD_CS01",
+    "password": "yourpassword",
+    "role": "HEAD_CS",
+    "department": "CS"
+  },
+  {
+    "uid": "HEAD_MBD01",
+    "password": "yourpassword",
+    "role": "HEAD_MBD",
+    "department": "M&BD"
+  },
+  {
+    "uid": "HEAD_SHE01",
+    "password": "yourpassword",
+    "role": "HEAD_SHE",
+    "department": "SHE"
+  },
+  {
+    "uid": "HEAD_PROJECTS01",
+    "password": "yourpassword",
+    "role": "HEAD_PROJECTS",
+    "department": "PROJECTS"
+  },
+  {
+    "uid": "HEAD_PROC01",
+    "password": "yourpassword",
+    "role": "HEAD_PROCUREMENT",
+    "department": "PROCUREMENT"
+  },
+  {
+    "uid": "CFO123",
+    "password": "yourpassword",
+    "role": "CFO"
+  },
+  {
+    "uid": "MD456",
+    "password": "yourpassword",
+    "role": "MD"
+  },
+  {
+    "uid": "CHIEF001",
+    "password": "yourpassword",
+    "role": "CHIEF"
+  },
+  {
+    "uid": "ACC789",
+    "password": "yourpassword",
+    "role": "ACCOUNTS"
+  }
+]

@@ -1,0 +1,26 @@
+.navigation-icons {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.nav-icon-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-icon-btn:hover {
+  background-color: #007bff;
+}
